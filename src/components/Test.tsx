@@ -6,8 +6,8 @@ const Test: React.FC = () => {
     a: String;
   };
 
-  const s: f = {
-    a: 'ff',
+  const b: f = {
+    a: 'd',
   };
 
   console.log('testLog');
