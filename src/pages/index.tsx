@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { VFC } from 'react';
 
 import Test from '../components/Test';
-const Home: React.FC = () => {
+const Home: VFC = () => {
   return (
     <div>
       <Test />

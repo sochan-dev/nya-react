@@ -1,19 +1,25 @@
-import React from 'react';
+import React, { VFC } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  switchLoading,
+  testCreateAsyncThunk,
+  getLoadingStatus,
+} from '../stores/slices/loadingStatusSlice';
 import Styles from 'styles/sass/test.module.scss';
 
-const Test: React.FC = () => {
-  type f = {
-    a: String;
-  };
+const Test: VFC = () => {
+  const dispatch = useDispatch();
+  const testLoadingStatus = useSelector(getLoadingStatus);
 
-  const b: f = {
-    a: 'd',
-  };
+  const doAction = () => dispatch(switchLoading('21-5-18'));
+  const doAsyncThunkAction = () => dispatch(testCreateAsyncThunk('非同期'));
 
   console.log('testLog');
   return (
     <div className={Styles.test}>
-      <p>success!!!!!!</p>
+      <p>{testLoadingStatus.testMessage}</p>
+      <button onClick={doAction}>doAction</button>
+      <button onClick={doAsyncThunkAction}>doAsyncThunk</button>
     </div>
   );
 };
