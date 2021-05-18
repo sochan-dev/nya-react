@@ -18,7 +18,7 @@ const Test: VFC = () => {
   return (
     <div className={Styles.test}>
       <p>{testLoadingStatus.testMessage}</p>
-      こうしんじゃ～～
+      最新5時43分
       <button onClick={doAction}>doAction</button>
       <button onClick={doAsyncThunkAction}>doAsyncThunk</button>
     </div>
