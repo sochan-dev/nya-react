@@ -5,7 +5,9 @@ import {
   testCreateAsyncThunk,
   getLoadingStatus,
 } from '../stores/slices/loadingStatusSlice';
-import Styles from 'styles/sass/test.module.scss';
+
+import Styles from 'styles/sass/test.module.scss'; //ソウタツ用(ソウマはここを非表示にしてソウマ用を表示する)
+//import Styles from 'styles/css/test.module.css';//サトウ用(ソウタツはここを非表示にしてソウタツ用を表示する)
 
 const Test: VFC = () => {
   const dispatch = useDispatch();
