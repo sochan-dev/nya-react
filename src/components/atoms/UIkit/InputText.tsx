@@ -15,6 +15,7 @@ type props = {
   disabled?: boolean;
   shrink?: boolean;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+  className?: string;
 };
 
 const InputText: VFC<props> = (props) => {
@@ -36,7 +37,9 @@ const InputText: VFC<props> = (props) => {
         InputLabelProps={{
           shrink: props.shrink,
         }}
+        //inputProps={{ className: props.className }}
         onChange={props.onChange}
+        className={props.className}
       />
     </>
   );
