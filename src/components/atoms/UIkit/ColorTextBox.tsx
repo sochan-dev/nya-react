@@ -4,7 +4,7 @@ import Styles from '../../../../styles/sass/ColorTextBox.module.scss';
 type props = {
   value: string;
   label: string;
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
 const ColorTextBox: VFC<props> = (props) => {
