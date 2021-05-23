@@ -22,7 +22,7 @@ type test = {
 const initialState: loadingStatus = {
   isLoading: false,
   isSuccess: false,
-  isError: null,
+  isError: '',
   testMessage: 'hello AsyncThunk',
 };
 /*////////////////////////////////////////////////
@@ -55,7 +55,7 @@ export const loadingStatusSlice = createSlice({
     switchLoading: (state, action: PayloadAction<string>) => {
       state.isLoading = true;
       state.isSuccess = false;
-      state.isError = null;
+      state.isError = '';
       state.testMessage = action.payload + 'Action成功';
     },
   },
