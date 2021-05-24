@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
 import { store } from '../stores';
 import { Provider } from 'react-redux';
+import PropTypes from 'prop-types';
 import type { AppProps /*, AppContext */ } from 'next/app';
 import Auth from '../components/containment/Auth';
 import { StylesProvider } from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Container from '@material-ui/core/Container';
 import '../../styles/sass/reset.scss';
 import '../../styles/sass/global.scss';
 
@@ -34,5 +33,8 @@ function MyApp(props: AppProps) {
     </StylesProvider>
   );
 }
-
+MyApp.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.object.isRequired,
+};
 export default MyApp;
