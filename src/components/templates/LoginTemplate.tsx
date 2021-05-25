@@ -23,7 +23,7 @@ const LoginTemplate: VFC = () => {
   return (
     <main>
       <Paper elevation={7} className={Styles.formContent}>
-        <h1>管理者ログイン</h1>
+        <h1>管理者ログイン </h1>
         <InputText
           label={'ID'}
           variant={'outlined'}
